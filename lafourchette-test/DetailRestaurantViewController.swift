@@ -14,10 +14,12 @@ class DetailRestaurantViewController: UIViewController {
     fileprivate let dataSource: CollectionViewDataSource<CellViewData>
     fileprivate let collectionViewLayout: UICollectionViewLayout
     fileprivate let collectionView: UICollectionView
+    fileprivate let viewModel: DetailRestaurantViewModel
     
-    init(viewDataFactory: DetailRestaurantCellDataFactory,
+    init(viewModel: DetailRestaurantViewModel,
          collectionViewLayout: UICollectionViewLayout = ListViewLayout()) {
-        self.dataSource = CollectionViewDataSource<CellViewData>(datas: viewDataFactory.create())
+        self.viewModel = viewModel
+        self.dataSource = CollectionViewDataSource<CellViewData>()
         self.collectionViewLayout = collectionViewLayout
         self.collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
         super.init(nibName: nil, bundle: nil)
@@ -32,6 +34,17 @@ class DetailRestaurantViewController: UIViewController {
         setupHierarchy()
         setupLayout()
         setupViews()
+        bindViewModel()
+    }
+}
+
+extension DetailRestaurantViewController {
+    fileprivate func bindViewModel() {
+        viewModel.ready()
+        viewModel.didChangeData = { [weak self] datas in
+            self?.dataSource.updateDatas(datas: datas)
+            self?.collectionView.reloadData()
+        }
     }
 }
 
@@ -47,7 +60,7 @@ extension DetailRestaurantViewController {
     }
     
     fileprivate func setupViews() {
-        collectionView.backgroundColor = UIColor.blue
+        collectionView.backgroundColor = UIColor.white
         registerCollectionViewCells()
         setupCollectionViewDataSource()
     }

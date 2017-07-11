@@ -14,7 +14,7 @@ class MapCell: UICollectionViewCell, CellType {
     fileprivate let mapView = MKMapView(frame: CGRect.zero)
     
     struct ViewData: CellViewData {
-        let address: String
+        let location: Location
     }
     
     override init(frame: CGRect) {
@@ -49,9 +49,13 @@ extension MapCell {
     fileprivate func setupViews() {
         backgroundColor = UIColor.white
         mapView.isScrollEnabled = false
+        mapView.isZoomEnabled = false
     }
 }
 
 extension MapCell {
-    func configure(with model: CellViewData) {}
+    func configure(with model: CellViewData) {
+        guard let model = model as? ViewData else { return }
+        mapView.quickAddPointAndZoom(lat: model.location.lat, long: model.location.long)
+    }
 }

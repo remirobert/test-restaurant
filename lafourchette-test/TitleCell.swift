@@ -63,10 +63,9 @@ extension TitleCell {
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.textColor = UIColor.black
         titleLabel.numberOfLines = 0
-        addressLabel.font = UIFont.systemFont(ofSize: 10)
+        addressLabel.font = UIFont.systemFont(ofSize: 12)
         addressLabel.textColor = UIColor.gray
         addressLabel.numberOfLines = 0
-        addressLabel.backgroundColor = UIColor.red.withAlphaComponent(0.5)
     }
 }
 

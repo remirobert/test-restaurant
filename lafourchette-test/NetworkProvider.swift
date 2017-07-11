@@ -12,7 +12,7 @@ let APIEndPoint: String = "https://api.lafourchette.com/api?key=IPHONEPRODEDCRFV
 
 class NetworkProvider {
     fileprivate let network: NetworkProtocol
-    
+
     init(network: NetworkProtocol = Network(endPoint: APIEndPoint)) {
         self.network = network
     }
@@ -20,7 +20,7 @@ class NetworkProvider {
 
 extension NetworkProvider: RestaurantProvider {
     func restaurant(withRestaurantId id: String, completion: @escaping (Restaurant?) -> Void) {
-        self.network.getItem(path: id) { result in
+        network.getItem(path: id) { result in
             switch result {
             case .Success(let json):
                 completion(Restaurant(json: json))

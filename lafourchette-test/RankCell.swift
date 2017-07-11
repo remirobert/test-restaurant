@@ -55,6 +55,6 @@ extension RankCell {
 extension RankCell {
     func configure(with model: CellViewData) {
         guard let model = model as? ViewData else { return }
-        rankLabel.text = model.rank
+        rankLabel.text = "\(model.rank) / 10"
     }
 }

@@ -9,17 +9,23 @@
 import UIKit
 
 protocol DetailRestaurantCellDataFactory {
+    var restaurant: Restaurant? { get set }
     func create() -> [CellViewData]
 }
 
 class RestaurantCellFactory: DetailRestaurantCellDataFactory {
 
+    var restaurant: Restaurant?
+
     func create() -> [CellViewData] {
+        guard let restaurant = restaurant else {
+            return []
+        }
         return [
-            ImageCell.ViewData(image: #imageLiteral(resourceName: "image")),
-            TitleCell.ViewData(title: "Restaurant title", address: "address"),
-            RankCell.ViewData(rank: "5/10"),
-            MapCell.ViewData(address:  "")
+            ImageCell.ViewData(image: restaurant.imageUrl),
+            TitleCell.ViewData(title: restaurant.name, address: restaurant.description),
+            RankCell.ViewData(rank: "\(restaurant.rate)"),
+            MapCell.ViewData(location: restaurant.location)
         ]
     }
 }

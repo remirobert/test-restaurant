@@ -10,10 +10,14 @@ import UIKit
 
 class CollectionViewDataSource<T>: NSObject, UICollectionViewDataSource {
     typealias CellFactory = (UICollectionView, T, IndexPath) -> UICollectionViewCell
+    fileprivate var datas: [T]
     var cellFactory: CellFactory?
-    fileprivate let datas: [T]
 
-    init(datas: [T]) {
+    func updateDatas(datas: [T]) {
+        self.datas = datas
+    }
+
+    init(datas: [T] = []) {
         self.datas = datas
     }
     

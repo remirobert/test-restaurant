@@ -14,7 +14,7 @@ class ImageCell: UICollectionViewCell, CellType {
     fileprivate let imageView = UIImageView(frame: CGRect.zero)
     
     struct ViewData: CellViewData {
-        let image: UIImage?
+        let image: String?
     }
 
     override init(frame: CGRect) {
@@ -26,7 +26,7 @@ class ImageCell: UICollectionViewCell, CellType {
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         layoutAttributes.bounds.size.width = UIScreen.main.bounds.size.width
-        layoutAttributes.bounds.size.height = 300//CGFloat(arc4random() % 500) + 200.0
+        layoutAttributes.bounds.size.height = 300
         return layoutAttributes
     }
 
@@ -49,7 +49,7 @@ extension ImageCell {
     }
     
     fileprivate func setupViews() {
-        backgroundColor = UIColor.orange
+        backgroundColor = UIColor.white
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         contentView.clipsToBounds = true
@@ -59,6 +59,17 @@ extension ImageCell {
 extension ImageCell {
     func configure(with model: CellViewData) {
         guard let model = model as? ViewData else { return }
-        imageView.image = model.image
+        guard let imageUrl = model.image else { return }
+        loadImage(url: imageUrl)
+    }
+
+    private func loadImage(url: String) {
+        guard let url = URL(string: url) else { return }
+        do {
+            let dataImage = try Data(contentsOf: url)
+            imageView.image = UIImage(data: dataImage)
+        } catch {
+
+        }
     }
 }
