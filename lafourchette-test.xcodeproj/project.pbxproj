@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB2FF82D1F1416EC001CBBA6 /* ListViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2FF82C1F1416EC001CBBA6 /* ListViewLayout.swift */; };
+		BB4E83801F14E82400F47ACF /* DetailRankCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E837F1F14E82400F47ACF /* DetailRankCollectionViewCell.swift */; };
+		BB4E83821F14EA1B00F47ACF /* DetailMapCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83811F14EA1B00F47ACF /* DetailMapCollectionViewCell.swift */; };
+		BB7E1D9B1F13D73E00D9633F /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9A1F13D73E00D9633F /* AppNavigator.swift */; };
+		BB7E1D9D1F14077400D9633F /* DetailRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9C1F14077400D9633F /* DetailRestaurantViewController.swift */; };
+		BB7E1D9F1F14084500D9633F /* DetailImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9E1F14084500D9633F /* DetailImageCollectionViewCell.swift */; };
+		BB97FC4C1F13D3E4008DD09E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB97FC4B1F13D3E4008DD09E /* AppDelegate.swift */; };
+		BB97FC531F13D3E4008DD09E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB97FC521F13D3E4008DD09E /* Assets.xcassets */; };
+		BB97FC561F13D3E4008DD09E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB97FC541F13D3E4008DD09E /* LaunchScreen.storyboard */; };
+		BBF9425B1F14341900506E5A /* DetailTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9425A1F14341900506E5A /* DetailTitleCollectionViewCell.swift */; };
+		DA5386A057A11047B00D6A79 /* Pods_lafourchette_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		002C02A985B85B73DE5DB79D /* Pods-lafourchette-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test.release.xcconfig"; sourceTree = "<group>"; };
+		2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lafourchette_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A09943F347974421989C8FB1 /* Pods-lafourchette-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test.debug.xcconfig"; sourceTree = "<group>"; };
+		BB2FF82C1F1416EC001CBBA6 /* ListViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewLayout.swift; sourceTree = "<group>"; };
+		BB4E837F1F14E82400F47ACF /* DetailRankCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRankCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB4E83811F14EA1B00F47ACF /* DetailMapCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMapCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB7E1D9A1F13D73E00D9633F /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		BB7E1D9C1F14077400D9633F /* DetailRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantViewController.swift; sourceTree = "<group>"; };
+		BB7E1D9E1F14084500D9633F /* DetailImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		BB97FC481F13D3E4008DD09E /* lafourchette-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "lafourchette-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB97FC4B1F13D3E4008DD09E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB97FC521F13D3E4008DD09E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB97FC551F13D3E4008DD09E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB97FC571F13D3E4008DD09E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF9425A1F14341900506E5A /* DetailTitleCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB97FC451F13D3E4008DD09E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA5386A057A11047B00D6A79 /* Pods_lafourchette_test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0051ED87D3D5C0B7FB221C7D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A09943F347974421989C8FB1 /* Pods-lafourchette-test.debug.xcconfig */,
+				002C02A985B85B73DE5DB79D /* Pods-lafourchette-test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3FACBF744B2037153AEDBD3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB97FC3F1F13D3E4008DD09E = {
+			isa = PBXGroup;
+			children = (
+				BB97FC4A1F13D3E4008DD09E /* lafourchette-test */,
+				BB97FC491F13D3E4008DD09E /* Products */,
+				0051ED87D3D5C0B7FB221C7D /* Pods */,
+				3FACBF744B2037153AEDBD3B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BB97FC491F13D3E4008DD09E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB97FC481F13D3E4008DD09E /* lafourchette-test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB97FC4A1F13D3E4008DD09E /* lafourchette-test */ = {
+			isa = PBXGroup;
+			children = (
+				BB97FC4B1F13D3E4008DD09E /* AppDelegate.swift */,
+				BB7E1D9A1F13D73E00D9633F /* AppNavigator.swift */,
+				BB7E1D9C1F14077400D9633F /* DetailRestaurantViewController.swift */,
+				BB7E1D9E1F14084500D9633F /* DetailImageCollectionViewCell.swift */,
+				BBF9425A1F14341900506E5A /* DetailTitleCollectionViewCell.swift */,
+				BB4E837F1F14E82400F47ACF /* DetailRankCollectionViewCell.swift */,
+				BB4E83811F14EA1B00F47ACF /* DetailMapCollectionViewCell.swift */,
+				BB2FF82C1F1416EC001CBBA6 /* ListViewLayout.swift */,
+				BB97FC521F13D3E4008DD09E /* Assets.xcassets */,
+				BB97FC541F13D3E4008DD09E /* LaunchScreen.storyboard */,
+				BB97FC571F13D3E4008DD09E /* Info.plist */,
+			);
+			path = "lafourchette-test";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB97FC471F13D3E4008DD09E /* lafourchette-test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB97FC5A1F13D3E4008DD09E /* Build configuration list for PBXNativeTarget "lafourchette-test" */;
+			buildPhases = (
+				4690410BC578866BBDA666FF /* [CP] Check Pods Manifest.lock */,
+				BB97FC441F13D3E4008DD09E /* Sources */,
+				BB97FC451F13D3E4008DD09E /* Frameworks */,
+				BB97FC461F13D3E4008DD09E /* Resources */,
+				B3D6EE3ADD08EA192646632F /* [CP] Embed Pods Frameworks */,
+				A58ECB05958F0E9E034A42A7 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "lafourchette-test";
+			productName = "lafourchette-test";
+			productReference = BB97FC481F13D3E4008DD09E /* lafourchette-test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB97FC401F13D3E4008DD09E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Remi Robert";
+				TargetAttributes = {
+					BB97FC471F13D3E4008DD09E = {
+						CreatedOnToolsVersion = 9.0;
+					};
+				};
+			};
+			buildConfigurationList = BB97FC431F13D3E4008DD09E /* Build configuration list for PBXProject "lafourchette-test" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB97FC3F1F13D3E4008DD09E;
+			productRefGroup = BB97FC491F13D3E4008DD09E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB97FC471F13D3E4008DD09E /* lafourchette-test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB97FC461F13D3E4008DD09E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB97FC561F13D3E4008DD09E /* LaunchScreen.storyboard in Resources */,
+				BB97FC531F13D3E4008DD09E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4690410BC578866BBDA666FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A58ECB05958F0E9E034A42A7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B3D6EE3ADD08EA192646632F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB97FC441F13D3E4008DD09E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB7E1D9D1F14077400D9633F /* DetailRestaurantViewController.swift in Sources */,
+				BB97FC4C1F13D3E4008DD09E /* AppDelegate.swift in Sources */,
+				BB4E83801F14E82400F47ACF /* DetailRankCollectionViewCell.swift in Sources */,
+				BBF9425B1F14341900506E5A /* DetailTitleCollectionViewCell.swift in Sources */,
+				BB4E83821F14EA1B00F47ACF /* DetailMapCollectionViewCell.swift in Sources */,
+				BB2FF82D1F1416EC001CBBA6 /* ListViewLayout.swift in Sources */,
+				BB7E1D9B1F13D73E00D9633F /* AppNavigator.swift in Sources */,
+				BB7E1D9F1F14084500D9633F /* DetailImageCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BB97FC541F13D3E4008DD09E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB97FC551F13D3E4008DD09E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB97FC581F13D3E4008DD09E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB97FC591F13D3E4008DD09E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB97FC5B1F13D3E4008DD09E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A09943F347974421989C8FB1 /* Pods-lafourchette-test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44Q2J6374R;
+				INFOPLIST_FILE = "lafourchette-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.remirobert.lafourchette-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BB97FC5C1F13D3E4008DD09E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 002C02A985B85B73DE5DB79D /* Pods-lafourchette-test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 44Q2J6374R;
+				INFOPLIST_FILE = "lafourchette-test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.remirobert.lafourchette-test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB97FC431F13D3E4008DD09E /* Build configuration list for PBXProject "lafourchette-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB97FC581F13D3E4008DD09E /* Debug */,
+				BB97FC591F13D3E4008DD09E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB97FC5A1F13D3E4008DD09E /* Build configuration list for PBXNativeTarget "lafourchette-test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB97FC5B1F13D3E4008DD09E /* Debug */,
+				BB97FC5C1F13D3E4008DD09E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB97FC401F13D3E4008DD09E /* Project object */;
+}
