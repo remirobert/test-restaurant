@@ -1,5 +1,5 @@
 //
-//  DetailRankCollectionViewCell.swift
+//  DetailMapCollectionViewCell.swift
 //  lafourchette-test
 //
 //  Created by Remi Robert on 11/07/2017.
@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import MapKit
 import SnapKit
 
-class DetailRankCollectionViewCell: UICollectionViewCell {
-
-    private let rankLabel = UILabel(frame: CGRect.zero)
-
+class MapCell: UICollectionViewCell, CellType {
+    fileprivate let mapView = MKMapView(frame: CGRect.zero)
+    
+    struct ViewData: CellViewData {
+        let address: String
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupHierarchy()
@@ -25,29 +29,29 @@ class DetailRankCollectionViewCell: UICollectionViewCell {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        // Calculate the smallest height required that fits the cell content. The width is set in ListFlowLayout.swift
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
-
         layoutAttributes.bounds.size.width = UIScreen.main.bounds.size.width
-        layoutAttributes.bounds.size.height = 50
+        layoutAttributes.bounds.size.height = 300
         return layoutAttributes
     }
+}
 
-    private func setupHierarchy() {
-        contentView.addSubview(rankLabel)
+extension MapCell {
+    fileprivate func setupHierarchy() {
+        contentView.addSubview(mapView)
     }
-
-    private func setupLayout() {
-        rankLabel.snp.makeConstraints { make in
+    
+    fileprivate func setupLayout() {
+        mapView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
 
-    private func setupViews() {
-        rankLabel.font = UIFont.boldSystemFont(ofSize: 12)
-        rankLabel.textAlignment = .center
-        rankLabel.text = "45"
+    fileprivate func setupViews() {
         backgroundColor = UIColor.white
+        mapView.isScrollEnabled = false
     }
+}
+
+extension MapCell {
+    func configure(with model: CellViewData) {}
 }

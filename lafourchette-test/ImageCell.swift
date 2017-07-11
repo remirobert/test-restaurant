@@ -10,9 +10,12 @@ import UIKit
 import Stevia
 import SnapKit
 
-class DetailImageCollectionViewCell: UICollectionViewCell {
-
-    private let imageView = UIImageView(frame: CGRect.zero)
+class ImageCell: UICollectionViewCell, CellType {
+    fileprivate let imageView = UIImageView(frame: CGRect.zero)
+    
+    struct ViewData: CellViewData {
+        let image: UIImage?
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -22,51 +25,40 @@ class DetailImageCollectionViewCell: UICollectionViewCell {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-// Calculate the smallest height required that fits the cell content. The width is set in ListFlowLayout.swift
-//        self.setNeedsLayout()
-//        self.layoutIfNeeded()
-
         layoutAttributes.bounds.size.width = UIScreen.main.bounds.size.width
         layoutAttributes.bounds.size.height = 300//CGFloat(arc4random() % 500) + 200.0
         return layoutAttributes
     }
 
-//    override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-//        let attributs = super.preferredLayoutAttributesFitting(layoutAttributes)
-//        attributs.frame.size.width = UIScreen.main.bounds.size.height
-//        attributs.frame.size.height = systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
-//        return attributs
-//    }
 
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+}
 
-    private func setupHierarchy() {
+extension ImageCell {
+    fileprivate func setupHierarchy() {
         contentView.addSubview(imageView)
     }
-
-    private func setupLayout() {
+    
+    fileprivate func setupLayout() {
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
-//            make.topMargin.equalToSuperview()
-//            make.bottomMargin.equalToSuperview()
-//            make.leftMargin.equalToSuperview()
-//            make.rightMargin.equalToSuperview()
-//            make.width.equalToSuperview()
-//            make.height.equalTo(Int(arc4random() % 500) + 200)
         }
     }
-
-    private func setupViews() {
+    
+    fileprivate func setupViews() {
         backgroundColor = UIColor.orange
         imageView.contentMode = .scaleAspectFill
         imageView.layer.masksToBounds = true
         contentView.clipsToBounds = true
     }
+}
 
-    func configure() {
-        imageView.image = UIImage(named: "image")
+extension ImageCell {
+    func configure(with model: CellViewData) {
+        guard let model = model as? ViewData else { return }
+        imageView.image = model.image
     }
 }

@@ -9,6 +9,8 @@
 import UIKit
 
 class ListViewLayout: UICollectionViewFlowLayout {
+    
+    private let defaultSize = CGSize(width: UIScreen.main.bounds.size.width, height: 50)
 
     override init() {
         super.init()
@@ -24,5 +26,6 @@ class ListViewLayout: UICollectionViewFlowLayout {
         minimumInteritemSpacing = 0
         minimumLineSpacing = 0
         scrollDirection = .vertical
+        self.estimatedItemSize = defaultSize
     }
 }

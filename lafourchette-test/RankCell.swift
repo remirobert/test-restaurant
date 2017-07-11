@@ -1,5 +1,5 @@
 //
-//  DetailMapCollectionViewCell.swift
+//  DetailRankCollectionViewCell.swift
 //  lafourchette-test
 //
 //  Created by Remi Robert on 11/07/2017.
@@ -7,12 +7,14 @@
 //
 
 import UIKit
-import MapKit
 import SnapKit
 
-class DetailMapCollectionViewCell: UICollectionViewCell {
-
-    private let mapView = MKMapView(frame: CGRect.zero)
+class RankCell: UICollectionViewCell, CellType {
+    fileprivate let rankLabel = UILabel(frame: CGRect.zero)
+    
+    struct ViewData: CellViewData {
+        let rank: String
+    }
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,27 +28,33 @@ class DetailMapCollectionViewCell: UICollectionViewCell {
     }
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
-        // Calculate the smallest height required that fits the cell content. The width is set in ListFlowLayout.swift
-        self.setNeedsLayout()
-        self.layoutIfNeeded()
-
         layoutAttributes.bounds.size.width = UIScreen.main.bounds.size.width
-        layoutAttributes.bounds.size.height = 300
+        layoutAttributes.bounds.size.height = 50
         return layoutAttributes
     }
+}
 
-    private func setupHierarchy() {
-        contentView.addSubview(mapView)
+extension RankCell {
+    fileprivate func setupHierarchy() {
+        contentView.addSubview(rankLabel)
     }
-
-    private func setupLayout() {
-        mapView.snp.makeConstraints { make in
+    
+    fileprivate func setupLayout() {
+        rankLabel.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
-
-    private func setupViews() {
+    
+    fileprivate func setupViews() {
+        rankLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        rankLabel.textAlignment = .center
         backgroundColor = UIColor.white
-        mapView.isScrollEnabled = false
+    }
+}
+
+extension RankCell {
+    func configure(with model: CellViewData) {
+        guard let model = model as? ViewData else { return }
+        rankLabel.text = model.rank
     }
 }

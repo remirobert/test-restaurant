@@ -1,15 +1,18 @@
 PODS:
+  - Alamofire (4.5.0)
   - SnapKit (3.2.0)
   - SteviaLayout (3.2.0)
 
 DEPENDENCIES:
+  - Alamofire
   - SnapKit
   - SteviaLayout
 
 SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
   SteviaLayout: 85c405f118ddb8637d0674ef6a79eefb792bf90b
 
-PODFILE CHECKSUM: 3a7113119536bf3ac2edeec8a05b80748a0866c9
+PODFILE CHECKSUM: 894165f8424d1ab3645681cc9b660328fc27281e
 
 COCOAPODS: 1.2.0

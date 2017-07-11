@@ -11,73 +11,77 @@ import Stevia
 import SnapKit
 
 class DetailRestaurantViewController: UIViewController {
-
-    private let collectionViewLayout = ListViewLayout()
-    private lazy var collectionView: UICollectionView = UICollectionView(frame: CGRect.zero,
-                                                                         collectionViewLayout: self.collectionViewLayout)
-
+    fileprivate let dataSource: CollectionViewDataSource<CellViewData>
+    fileprivate let collectionViewLayout: UICollectionViewLayout
+    fileprivate let collectionView: UICollectionView
+    
+    init(viewDataFactory: DetailRestaurantCellDataFactory,
+         collectionViewLayout: UICollectionViewLayout = ListViewLayout()) {
+        self.dataSource = CollectionViewDataSource<CellViewData>(datas: viewDataFactory.create())
+        self.collectionViewLayout = collectionViewLayout
+        self.collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: self.collectionViewLayout)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
         setupViews()
     }
+}
 
-    private func setupHierarchy() {
+extension DetailRestaurantViewController {
+    fileprivate func setupHierarchy() {
         view.addSubview(collectionView)
     }
-
-    private func setupLayout() {
+    
+    fileprivate func setupLayout() {
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
-
-    private func setupViews() {
-        collectionViewLayout.estimatedItemSize = CGSize(width: UIScreen.main.bounds.size.width, height: 50)
+    
+    fileprivate func setupViews() {
         collectionView.backgroundColor = UIColor.blue
-        collectionView.dataSource = self
-        collectionView.register(DetailImageCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
-        collectionView.register(DetailTitleCollectionViewCell.self, forCellWithReuseIdentifier: "cell1")
-        collectionView.register(DetailRankCollectionViewCell.self, forCellWithReuseIdentifier: "cell2")
-        collectionView.register(DetailMapCollectionViewCell.self, forCellWithReuseIdentifier: "cell3")
+        registerCollectionViewCells()
+        setupCollectionViewDataSource()
+    }
+    
+    private func registerCollectionViewCells() {
+        collectionView.registerCell(withClass: ImageCell.self)
+        collectionView.registerCell(withClass: TitleCell.self)
+        collectionView.registerCell(withClass: RankCell.self)
+        collectionView.registerCell(withClass: MapCell.self)
     }
 }
 
-extension DetailRestaurantViewController: UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+extension DetailRestaurantViewController {
+    fileprivate func setupCollectionViewDataSource() {
+        dataSource.cellFactory = { [weak self] collectionView, viewData, indexPath in
+            guard let cell = self?.dequeuCell(AtIndexPath: indexPath), cell is UICollectionViewCell else {
+                return UICollectionViewCell()
+            }
+            cell.configure(with: viewData)
+            return cell as! UICollectionViewCell
+        }
+        collectionView.dataSource = dataSource
     }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.row == 0 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? DetailImageCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.backgroundColor = UIColor.red
-            cell.configure()
-            return cell
+    
+    private func dequeuCell(AtIndexPath indexPath: IndexPath) -> CellType? {
+        let dequeuCellsIdentifiers = [
+            ImageCell.identifier,
+            TitleCell.identifier,
+            RankCell.identifier,
+            MapCell.identifier
+        ]
+        guard let identifier = dequeuCellsIdentifiers[safe: indexPath.row] else {
+            return nil
         }
-
-        if indexPath.row == 1 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell1", for: indexPath) as? DetailTitleCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            cell.configure()
-            return cell
-        }
-        if indexPath.row == 2 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as? DetailRankCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        }
-        if indexPath.row == 3 {
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell3", for: indexPath) as? DetailMapCollectionViewCell else {
-                return UICollectionViewCell()
-            }
-            return cell
-        }
-        return UICollectionViewCell()
+        return collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath) as? CellType
     }
 }
