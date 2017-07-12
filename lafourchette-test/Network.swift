@@ -9,32 +9,28 @@
 import Foundation
 
 protocol NetworkProtocol {
-    func getItem(path: String, completionRequest: @escaping CompletionGetItem)
+    func getData(path: String, completionRequest: @escaping CompletionGetData)
 }
 
 typealias JSON = [String:Any]
-typealias CompletionGetItem = (Result<JSON>) -> Void
+typealias CompletionGetData = (Result<Data>) -> Void
 
 enum NetworkError: Error {
     case noData
     case invalidURL
-    case parseJSONError
 }
 
 final class Network {
-    fileprivate let endPoint: String
     fileprivate let session: URLSession
     
-    init(endPoint: String, session: URLSession = URLSession.shared) {
-        self.endPoint = endPoint
+    init(session: URLSession = URLSession.shared) {
         self.session = session
     }
 }
 
 extension Network: NetworkProtocol {
-    func getItem(path: String, completionRequest: @escaping CompletionGetItem) {
-        let absolutePath = "\(endPoint)\(path)"
-        guard let url = URL(string: absolutePath) else {
+    func getData(path: String, completionRequest: @escaping CompletionGetData) {
+        guard let url = URL(string: path) else {
             completionRequest(Result.Failure(NetworkError.invalidURL))
             return
         }
@@ -44,18 +40,13 @@ extension Network: NetworkProtocol {
         let task = session.dataTask(with: request as URLRequest) { (data: Data?, response: URLResponse?, error: Error?) in
             if let error = error {
                 completionRequest(Result.Failure(error))
+                return
             }
             guard let data = data else {
                 completionRequest(Result.Failure(NetworkError.noData))
                 return
             }
-            do {
-                let jsonData = try JSONSerialization.jsonObject(with: data, options: [])
-                let json = jsonData as! JSON
-                completionRequest(Result<JSON>.Success(json))
-            } catch {
-                completionRequest(Result.Failure(NetworkError.parseJSONError))
-            }
+            completionRequest(Result<Data>.Success(data))
         }
         task.resume()
     }

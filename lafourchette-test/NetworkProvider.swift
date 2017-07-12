@@ -11,16 +11,20 @@ import Foundation
 let APIEndPoint: String = "https://api.lafourchette.com/api?key=IPHONEPRODEDCRFV&method=restaurant_get_info&id_restaurant="
 
 class NetworkProvider {
-    fileprivate let network: NetworkProtocol
+    fileprivate let network: JSONDownloader
+    fileprivate let endPoint: String
 
-    init(network: NetworkProtocol = Network(endPoint: APIEndPoint)) {
+    init(endPoint: String = APIEndPoint,
+         network: JSONDownloader = Network()) {
+        self.endPoint = endPoint
         self.network = network
     }
 }
 
 extension NetworkProvider: RestaurantProvider {
     func restaurant(withRestaurantId id: String, completion: @escaping (Restaurant?) -> Void) {
-        network.getItem(path: id) { result in
+        let absolutePath = "\(endPoint)\(id)"
+        network.getJSON(path: absolutePath) { result in
             switch result {
             case .Success(let json):
                 completion(Restaurant(json: json))

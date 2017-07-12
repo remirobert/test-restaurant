@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import SnapKit
 
-class MapCell: UICollectionViewCell, CellType {
+class MapCell: UICollectionViewCell, CellType, MKMapViewDelegate {
     fileprivate let mapView = MKMapView(frame: CGRect.zero)
     
     struct ViewData: CellViewData {

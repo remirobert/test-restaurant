@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Stevia
 import SnapKit
 
 class DetailRestaurantViewController: UIViewController {

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Remi Robert. All rights reserved.
 //
 
-import UIKit
+import Foundation
 
 protocol RestaurantProvider {
     typealias RestaurantProviderGetCompletion = (Restaurant?) -> Void

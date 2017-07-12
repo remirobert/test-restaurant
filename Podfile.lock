@@ -1,18 +1,25 @@
 PODS:
-  - Alamofire (4.5.0)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - Nimble (7.0.1)
+  - Quick (1.1.0)
   - SnapKit (3.2.0)
-  - SteviaLayout (3.2.0)
 
 DEPENDENCIES:
-  - Alamofire
+  - FBSnapshotTestCase
+  - Nimble
+  - Quick
   - SnapKit
-  - SteviaLayout
 
 SPEC CHECKSUMS:
-  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  Nimble: 657d000e11df8aebe27cdaf9d244de7f30ed87f7
+  Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
   SnapKit: 1ca44df72cfa543218d177cb8aab029d10d86ea7
-  SteviaLayout: 85c405f118ddb8637d0674ef6a79eefb792bf90b
 
-PODFILE CHECKSUM: 894165f8424d1ab3645681cc9b660328fc27281e
+PODFILE CHECKSUM: 7c8703e0728f65f1fb50df15f3597a09c0187d25
 
 COCOAPODS: 1.2.0

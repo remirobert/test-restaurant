@@ -23,6 +23,15 @@
 		BB4E83821F14EA1B00F47ACF /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83811F14EA1B00F47ACF /* MapCell.swift */; };
 		BB4E83841F154F7000F47ACF /* DetailRestaurantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83831F154F7000F47ACF /* DetailRestaurantViewModel.swift */; };
 		BB4E83861F15737C00F47ACF /* MKMapView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83851F15737C00F47ACF /* MKMapView+.swift */; };
+		BB4E83881F168D8800F47ACF /* JSONDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83871F168D8800F47ACF /* JSONDownloader.swift */; };
+		BB4E838A1F168DDB00F47ACF /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83891F168DDB00F47ACF /* ImageDownloader.swift */; };
+		BB4E839B1F16940600F47ACF /* ImageCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E839A1F16940600F47ACF /* ImageCellSnapshotTests.swift */; };
+		BB4E839D1F16AEC400F47ACF /* TitleCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E839C1F16AEC400F47ACF /* TitleCellSnapshotTests.swift */; };
+		BB4E83A11F16BBDF00F47ACF /* RankCellSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83A01F16BBDF00F47ACF /* RankCellSnapshotTests.swift */; };
+		BB4E83A31F16BC8100F47ACF /* DetailRestaurantSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83A21F16BC8100F47ACF /* DetailRestaurantSnapshotTests.swift */; };
+		BB4E83A51F16BE1400F47ACF /* StubImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83A41F16BE1400F47ACF /* StubImageDownloader.swift */; };
+		BB4E83A71F16C38500F47ACF /* CollectionDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83A61F16C38500F47ACF /* CollectionDataSourceTests.swift */; };
+		BB4E83A91F16D05200F47ACF /* NetworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4E83A81F16D05200F47ACF /* NetworkTests.swift */; };
 		BB7E1D9B1F13D73E00D9633F /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9A1F13D73E00D9633F /* AppNavigator.swift */; };
 		BB7E1D9D1F14077400D9633F /* DetailRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9C1F14077400D9633F /* DetailRestaurantViewController.swift */; };
 		BB7E1D9F1F14084500D9633F /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7E1D9E1F14084500D9633F /* ImageCell.swift */; };
@@ -31,10 +40,23 @@
 		BB97FC561F13D3E4008DD09E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB97FC541F13D3E4008DD09E /* LaunchScreen.storyboard */; };
 		BBF9425B1F14341900506E5A /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9425A1F14341900506E5A /* TitleCell.swift */; };
 		DA5386A057A11047B00D6A79 /* Pods_lafourchette_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */; };
+		EA2DCEF73EAE6788142A3D93 /* Pods_lafourchette_testTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079A3EF3E920A024D42F270D /* Pods_lafourchette_testTests.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB4E83941F1692DC00F47ACF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB97FC401F13D3E4008DD09E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB97FC471F13D3E4008DD09E;
+			remoteInfo = "lafourchette-test";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		002C02A985B85B73DE5DB79D /* Pods-lafourchette-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-test.release.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test.release.xcconfig"; sourceTree = "<group>"; };
+		079A3EF3E920A024D42F270D /* Pods_lafourchette_testTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lafourchette_testTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1833C174F11E077F46A21DF3 /* Pods-lafourchette-testTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-testTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-testTests/Pods-lafourchette-testTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_lafourchette_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A09943F347974421989C8FB1 /* Pods-lafourchette-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test.debug.xcconfig"; sourceTree = "<group>"; };
 		A53959DD1F14FF780014B1B3 /* CollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewDataSource.swift; sourceTree = "<group>"; };
@@ -53,6 +75,17 @@
 		BB4E83811F14EA1B00F47ACF /* MapCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
 		BB4E83831F154F7000F47ACF /* DetailRestaurantViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRestaurantViewModel.swift; sourceTree = "<group>"; };
 		BB4E83851F15737C00F47ACF /* MKMapView+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MKMapView+.swift"; sourceTree = "<group>"; };
+		BB4E83871F168D8800F47ACF /* JSONDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDownloader.swift; sourceTree = "<group>"; };
+		BB4E83891F168DDB00F47ACF /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		BB4E838F1F1692DC00F47ACF /* lafourchette-testTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "lafourchette-testTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB4E83931F1692DC00F47ACF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB4E839A1F16940600F47ACF /* ImageCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCellSnapshotTests.swift; sourceTree = "<group>"; };
+		BB4E839C1F16AEC400F47ACF /* TitleCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCellSnapshotTests.swift; sourceTree = "<group>"; };
+		BB4E83A01F16BBDF00F47ACF /* RankCellSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankCellSnapshotTests.swift; sourceTree = "<group>"; };
+		BB4E83A21F16BC8100F47ACF /* DetailRestaurantSnapshotTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailRestaurantSnapshotTests.swift; sourceTree = "<group>"; };
+		BB4E83A41F16BE1400F47ACF /* StubImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StubImageDownloader.swift; sourceTree = "<group>"; };
+		BB4E83A61F16C38500F47ACF /* CollectionDataSourceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionDataSourceTests.swift; sourceTree = "<group>"; };
+		BB4E83A81F16D05200F47ACF /* NetworkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkTests.swift; sourceTree = "<group>"; };
 		BB7E1D9A1F13D73E00D9633F /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
 		BB7E1D9C1F14077400D9633F /* DetailRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantViewController.swift; sourceTree = "<group>"; };
 		BB7E1D9E1F14084500D9633F /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
@@ -62,9 +95,18 @@
 		BB97FC551F13D3E4008DD09E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BB97FC571F13D3E4008DD09E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBF9425A1F14341900506E5A /* TitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		C7F95A893BC1DAE328329F48 /* Pods-lafourchette-testTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lafourchette-testTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-lafourchette-testTests/Pods-lafourchette-testTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BB4E838C1F1692DC00F47ACF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA2DCEF73EAE6788142A3D93 /* Pods_lafourchette_testTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB97FC451F13D3E4008DD09E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +123,8 @@
 			children = (
 				A09943F347974421989C8FB1 /* Pods-lafourchette-test.debug.xcconfig */,
 				002C02A985B85B73DE5DB79D /* Pods-lafourchette-test.release.xcconfig */,
+				1833C174F11E077F46A21DF3 /* Pods-lafourchette-testTests.debug.xcconfig */,
+				C7F95A893BC1DAE328329F48 /* Pods-lafourchette-testTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -89,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2E4039A4166F82021F20BE59 /* Pods_lafourchette_test.framework */,
+				079A3EF3E920A024D42F270D /* Pods_lafourchette_testTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				A53959F51F1519010014B1B3 /* Network.swift */,
+				BB4E83871F168D8800F47ACF /* JSONDownloader.swift */,
+				BB4E83891F168DDB00F47ACF /* ImageDownloader.swift */,
 				A53959F81F151CEB0014B1B3 /* Result.swift */,
 			);
 			name = Network;
@@ -149,10 +196,34 @@
 			name = NetworkProvider;
 			sourceTree = "<group>";
 		};
+		BB4E83901F1692DC00F47ACF /* lafourchette-testTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB4E83991F1693F400F47ACF /* SnapshotTests */,
+				BB4E83931F1692DC00F47ACF /* Info.plist */,
+				BB4E83A41F16BE1400F47ACF /* StubImageDownloader.swift */,
+				BB4E83A61F16C38500F47ACF /* CollectionDataSourceTests.swift */,
+				BB4E83A81F16D05200F47ACF /* NetworkTests.swift */,
+			);
+			path = "lafourchette-testTests";
+			sourceTree = "<group>";
+		};
+		BB4E83991F1693F400F47ACF /* SnapshotTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB4E839A1F16940600F47ACF /* ImageCellSnapshotTests.swift */,
+				BB4E839C1F16AEC400F47ACF /* TitleCellSnapshotTests.swift */,
+				BB4E83A01F16BBDF00F47ACF /* RankCellSnapshotTests.swift */,
+				BB4E83A21F16BC8100F47ACF /* DetailRestaurantSnapshotTests.swift */,
+			);
+			name = SnapshotTests;
+			sourceTree = "<group>";
+		};
 		BB97FC3F1F13D3E4008DD09E = {
 			isa = PBXGroup;
 			children = (
 				BB97FC4A1F13D3E4008DD09E /* lafourchette-test */,
+				BB4E83901F1692DC00F47ACF /* lafourchette-testTests */,
 				BB97FC491F13D3E4008DD09E /* Products */,
 				0051ED87D3D5C0B7FB221C7D /* Pods */,
 				3FACBF744B2037153AEDBD3B /* Frameworks */,
@@ -163,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				BB97FC481F13D3E4008DD09E /* lafourchette-test.app */,
+				BB4E838F1F1692DC00F47ACF /* lafourchette-testTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -193,6 +265,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BB4E838E1F1692DC00F47ACF /* lafourchette-testTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB4E83961F1692DC00F47ACF /* Build configuration list for PBXNativeTarget "lafourchette-testTests" */;
+			buildPhases = (
+				FDB56C405D5A92B8AA35B4C9 /* [CP] Check Pods Manifest.lock */,
+				BB4E838B1F1692DC00F47ACF /* Sources */,
+				BB4E838C1F1692DC00F47ACF /* Frameworks */,
+				BB4E838D1F1692DC00F47ACF /* Resources */,
+				2D2FAEE0ED0CE57D2CE089B8 /* [CP] Embed Pods Frameworks */,
+				C11D62A3BC097DE9F5E4B94C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB4E83951F1692DC00F47ACF /* PBXTargetDependency */,
+			);
+			name = "lafourchette-testTests";
+			productName = "lafourchette-testTests";
+			productReference = BB4E838F1F1692DC00F47ACF /* lafourchette-testTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BB97FC471F13D3E4008DD09E /* lafourchette-test */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB97FC5A1F13D3E4008DD09E /* Build configuration list for PBXNativeTarget "lafourchette-test" */;
@@ -219,10 +312,15 @@
 		BB97FC401F13D3E4008DD09E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0900;
+				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Remi Robert";
 				TargetAttributes = {
+					BB4E838E1F1692DC00F47ACF = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BB97FC471F13D3E4008DD09E;
+					};
 					BB97FC471F13D3E4008DD09E = {
 						CreatedOnToolsVersion = 9.0;
 					};
@@ -242,11 +340,19 @@
 			projectRoot = "";
 			targets = (
 				BB97FC471F13D3E4008DD09E /* lafourchette-test */,
+				BB4E838E1F1692DC00F47ACF /* lafourchette-testTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BB4E838D1F1692DC00F47ACF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB97FC461F13D3E4008DD09E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -259,6 +365,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D2FAEE0ED0CE57D2CE089B8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lafourchette-testTests/Pods-lafourchette-testTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4690410BC578866BBDA666FF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,9 +425,53 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lafourchette-test/Pods-lafourchette-test-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C11D62A3BC097DE9F5E4B94C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-lafourchette-testTests/Pods-lafourchette-testTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDB56C405D5A92B8AA35B4C9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BB4E838B1F1692DC00F47ACF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB4E83A11F16BBDF00F47ACF /* RankCellSnapshotTests.swift in Sources */,
+				BB4E83A91F16D05200F47ACF /* NetworkTests.swift in Sources */,
+				BB4E83A51F16BE1400F47ACF /* StubImageDownloader.swift in Sources */,
+				BB4E839B1F16940600F47ACF /* ImageCellSnapshotTests.swift in Sources */,
+				BB4E839D1F16AEC400F47ACF /* TitleCellSnapshotTests.swift in Sources */,
+				BB4E83A31F16BC8100F47ACF /* DetailRestaurantSnapshotTests.swift in Sources */,
+				BB4E83A71F16C38500F47ACF /* CollectionDataSourceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BB97FC441F13D3E4008DD09E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -314,6 +479,7 @@
 				A53959F91F151CEB0014B1B3 /* Result.swift in Sources */,
 				A53959EA1F150DF00014B1B3 /* Array+.swift in Sources */,
 				BB4E83861F15737C00F47ACF /* MKMapView+.swift in Sources */,
+				BB4E838A1F168DDB00F47ACF /* ImageDownloader.swift in Sources */,
 				BB4E83841F154F7000F47ACF /* DetailRestaurantViewModel.swift in Sources */,
 				A53959E71F15066E0014B1B3 /* UICollectionView+.swift in Sources */,
 				A53959F01F15185A0014B1B3 /* RestaurantProvider.swift in Sources */,
@@ -325,6 +491,7 @@
 				BB4E83801F14E82400F47ACF /* RankCell.swift in Sources */,
 				BBF9425B1F14341900506E5A /* TitleCell.swift in Sources */,
 				A53959EC1F15110C0014B1B3 /* RestaurantCellFactory.swift in Sources */,
+				BB4E83881F168D8800F47ACF /* JSONDownloader.swift in Sources */,
 				A53959F61F1519010014B1B3 /* Network.swift in Sources */,
 				A53959DE1F14FF780014B1B3 /* CollectionViewDataSource.swift in Sources */,
 				A53959E51F1506460014B1B3 /* UICollectionViewCell+.swift in Sources */,
@@ -336,6 +503,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB4E83951F1692DC00F47ACF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB97FC471F13D3E4008DD09E /* lafourchette-test */;
+			targetProxy = BB4E83941F1692DC00F47ACF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BB97FC541F13D3E4008DD09E /* LaunchScreen.storyboard */ = {
@@ -349,6 +524,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BB4E83971F1692DC00F47ACF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1833C174F11E077F46A21DF3 /* Pods-lafourchette-testTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 44Q2J6374R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = "lafourchette-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.remirobert.lafourchette-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lafourchette-test.app/lafourchette-test";
+			};
+			name = Debug;
+		};
+		BB4E83981F1692DC00F47ACF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7F95A893BC1DAE328329F48 /* Pods-lafourchette-testTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 44Q2J6374R;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				INFOPLIST_FILE = "lafourchette-testTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.remirobert.lafourchette-testTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/lafourchette-test.app/lafourchette-test";
+			};
+			name = Release;
+		};
 		BB97FC581F13D3E4008DD09E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -487,6 +700,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BB4E83961F1692DC00F47ACF /* Build configuration list for PBXNativeTarget "lafourchette-testTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB4E83971F1692DC00F47ACF /* Debug */,
+				BB4E83981F1692DC00F47ACF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BB97FC431F13D3E4008DD09E /* Build configuration list for PBXProject "lafourchette-test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

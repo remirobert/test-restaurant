@@ -7,14 +7,34 @@
 //
 
 import UIKit
-import Stevia
 import SnapKit
 
 class ImageCell: UICollectionViewCell, CellType {
     fileprivate let imageView = UIImageView(frame: CGRect.zero)
-    
-    struct ViewData: CellViewData {
-        let image: String?
+
+    class ViewData: CellViewData {
+        private let image: String?
+        private let imageDownloader: ImageDownloader
+
+        init(image: String?, imageDownloader: ImageDownloader) {
+            self.image = image
+            self.imageDownloader = imageDownloader
+        }
+
+        func downloadImage(completion: @escaping (UIImage?) -> Void) {
+            guard let image = image else {
+                completion(nil)
+                return
+            }
+            imageDownloader.getImage(path: image) { result in
+                switch result {
+                case .Success(let image):
+                    completion(image)
+                default:
+                    completion(nil)
+                }
+            }
+        }
     }
 
     override init(frame: CGRect) {
@@ -40,14 +60,14 @@ extension ImageCell {
     fileprivate func setupHierarchy() {
         contentView.addSubview(imageView)
     }
-    
+
     fileprivate func setupLayout() {
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
     }
-    
+
     fileprivate func setupViews() {
         backgroundColor = UIColor.white
         imageView.contentMode = .scaleAspectFill
@@ -58,18 +78,10 @@ extension ImageCell {
 
 extension ImageCell {
     func configure(with model: CellViewData) {
+        print(model)
         guard let model = model as? ViewData else { return }
-        guard let imageUrl = model.image else { return }
-        loadImage(url: imageUrl)
-    }
-
-    private func loadImage(url: String) {
-        guard let url = URL(string: url) else { return }
-        do {
-            let dataImage = try Data(contentsOf: url)
-            imageView.image = UIImage(data: dataImage)
-        } catch {
-
+        model.downloadImage { [weak self] image in
+            self?.imageView.image = image
         }
     }
 }
