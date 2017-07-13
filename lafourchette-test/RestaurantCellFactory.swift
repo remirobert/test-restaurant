@@ -27,7 +27,7 @@ class RestaurantCellFactory: DetailRestaurantCellDataFactory {
         }
         return [
             ImageCell.ViewData(image: restaurant.imageUrl, imageDownloader: imageDownloader),
-            TitleCell.ViewData(title: restaurant.name, address: restaurant.description),
+            TitleCell.ViewData(title: restaurant.name, description: restaurant.description),
             RankCell.ViewData(rank: "\(restaurant.rate)"),
             MapCell.ViewData(location: restaurant.location)
         ]

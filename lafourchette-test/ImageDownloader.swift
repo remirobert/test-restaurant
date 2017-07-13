@@ -21,15 +21,17 @@ enum ImageDownloaderError: Error {
 extension Network: ImageDownloader {
     func getImage(path: String, completionRequest: @escaping CompletionGetImage) {
         getData(path: path) { result in
-            switch result {
-            case .Success(let data):
-                guard let image = UIImage(data: data) else {
-                    completionRequest(Result.Failure(ImageDownloaderError.errorData))
-                    return
-                }
-                completionRequest(Result<UIImage>.Success(image))
-            case .Failure(let error):
-                completionRequest(Result.Failure(error))
+            DispatchQueue.main.async {
+                switch result {
+                case .Success(let data):
+                    guard let image = UIImage(data: data) else {
+                        completionRequest(Result.Failure(ImageDownloaderError.errorData))
+                        return
+                    }
+                    completionRequest(Result<UIImage>.Success(image))
+                case .Failure(let error):
+                    completionRequest(Result.Failure(error))
+                }                
             }
         }
     }

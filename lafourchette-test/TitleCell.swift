@@ -11,12 +11,12 @@ import SnapKit
 
 class TitleCell: UICollectionViewCell, CellType {
     fileprivate let titleLabel = UILabel(frame: CGRect.zero)
-    fileprivate let addressLabel = UILabel(frame: CGRect.zero)
+    fileprivate let descriptionLabel = UILabel(frame: CGRect.zero)
     fileprivate var titleLabelHeight: Constraint?
     
     struct ViewData: CellViewData {
         let title: String
-        let address: String
+        let description: String
     }
 
     override init(frame: CGRect) {
@@ -32,7 +32,7 @@ class TitleCell: UICollectionViewCell, CellType {
 
     override func preferredLayoutAttributesFitting(_ layoutAttributes: UICollectionViewLayoutAttributes) -> UICollectionViewLayoutAttributes {
         layoutAttributes.bounds.size.width = UIScreen.main.bounds.size.width
-        layoutAttributes.bounds.size.height = titleLabel.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + addressLabel.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        layoutAttributes.bounds.size.height = titleLabel.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height + descriptionLabel.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
         return layoutAttributes
     }
 }
@@ -40,7 +40,7 @@ class TitleCell: UICollectionViewCell, CellType {
 extension TitleCell {
     fileprivate func setupHierarchy() {
         contentView.addSubview(titleLabel)
-        contentView.addSubview(addressLabel)
+        contentView.addSubview(descriptionLabel)
     }
     
     fileprivate func setupLayout() {
@@ -50,7 +50,7 @@ extension TitleCell {
             make.top.equalToSuperview()
             make.height.equalTo(25)
         }
-        addressLabel.snp.makeConstraints { make in
+        descriptionLabel.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom)
             make.leadingMargin.equalToSuperview().offset(10)
             make.trailingMargin.equalToSuperview().offset(-10)
@@ -63,9 +63,9 @@ extension TitleCell {
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
         titleLabel.textColor = UIColor.black
         titleLabel.numberOfLines = 0
-        addressLabel.font = UIFont.systemFont(ofSize: 12)
-        addressLabel.textColor = UIColor.gray
-        addressLabel.numberOfLines = 0
+        descriptionLabel.font = UIFont.systemFont(ofSize: 12)
+        descriptionLabel.textColor = UIColor.gray
+        descriptionLabel.numberOfLines = 0
     }
 }
 
@@ -73,7 +73,7 @@ extension TitleCell {
     func configure(with model: CellViewData) {
         guard let model = model as? ViewData else { return }
         titleLabel.text = model.title
-        addressLabel.text = model.address
+        descriptionLabel.text = model.description
         contentView.setNeedsUpdateConstraints()
         contentView.updateConstraintsIfNeeded()
         contentView.setNeedsLayout()

@@ -17,7 +17,7 @@ class TitleCellSnapshotTests: FBSnapshotTestCase {
     }
 
     func testTitleCell() {
-        let viewData = TitleCell.ViewData(title: "title", address: "description")
+        let viewData = TitleCell.ViewData(title: "title", description: "description")
         let cell = TitleCell(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
         cell.configure(with: viewData)
         FBSnapshotVerifyView(cell)

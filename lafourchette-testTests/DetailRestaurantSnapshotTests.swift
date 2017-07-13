@@ -29,7 +29,7 @@ internal class MockedRestaurantViewModel: DetailRestaurantViewModel {
     override func ready() {
         let viewsData: [CellViewData] = [
             ImageCell.ViewData(image: "", imageDownloader: StubImageDownloader()),
-            TitleCell.ViewData(title: "Title", address: "description"),
+            TitleCell.ViewData(title: "Title", description: "description"),
             RankCell.ViewData(rank: "4"),
             MapCell.ViewData(location: Location(lat: 0, long: 0))
         ]

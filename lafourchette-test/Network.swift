@@ -20,15 +20,13 @@ enum NetworkError: Error {
     case invalidURL
 }
 
-final class Network {
+class Network: NetworkProtocol {
     fileprivate let session: URLSession
     
     init(session: URLSession = URLSession.shared) {
         self.session = session
     }
-}
-
-extension Network: NetworkProtocol {
+    
     func getData(path: String, completionRequest: @escaping CompletionGetData) {
         guard let url = URL(string: path) else {
             completionRequest(Result.Failure(NetworkError.invalidURL))
